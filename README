@@ -24,4 +24,5 @@ INSTRUCTIONS:
    
 3) The tests results will be available in the directory results under
    a folder with the video name and a subfolder with the method name
-   and the two given setpoints.
+   and the two given setpoints. We already provide results for all the controllers 
+includin the PID.
