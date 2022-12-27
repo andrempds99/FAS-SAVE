@@ -26,3 +26,18 @@ INSTRUCTIONS:
    a folder with the video name and a subfolder with the method name
    and the two given setpoints. We already provide results for all the controllers 
 includin the PID.
+
+NOTE: In case cvopt folder is emtpy, a zip file containing a backup is available for download.
+
+Remarks:
+By observing numerous examples, it is possible to notice that none of the controllers were able to lower
+the SSIM under 0.7 consistently, despite the objective being set to 0.5. The reasoning behind this,
+is that the objectives conflict with each other, meaning that for the given example, it is not possible
+to achieve the two set points at the same time, with the controllers opting for the best overall result
+possible.
+Additionally, despite the mpc controllers presenting the best results, we must highlight that the
+PID implementation has its advantages. Compared to the mpc, the PID controller has a simpler
+implementation that follows basic mathematical principles. On the other hand, mpc uses kalman
+filter and has an extensive and complex implementation that is more costly. Performance wise, PID
+also has the edge, as it provides satisfactory results while being faster than mpc due to the lower
+amount of computation necessary to compute the actuator values."
